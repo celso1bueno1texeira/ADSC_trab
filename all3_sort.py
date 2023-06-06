@@ -81,49 +81,65 @@ def measure_time(sort_func, arr):
     end_time = time.time()
     return end_time - start_time
 
-# Vetor de 100 elementos
-# arr_100 = generate_random_array(100)
-# print("\nBubble Sort (100):")
-# for _ in range(10):
-#     print(f"Tempo: {measure_time(bubblesort, arr_100)} segundos")
-
-# print("\nInsertion Sort (100):")
-# for _ in range(10):
-#     print(f"Tempo: {measure_time(insertionsort, arr_100)} segundos")
-
-# print("\nMerge Sort (100):")
-# for _ in range(10):
-#     print(f"Tempo: {measure_time(mergesort, arr_100)} segundos")
-
-# print("\nheapsort (100):")
-# for _ in range(10):
-#     print(f"Tempo: {measure_time(heapsort, arr_100)} segundos")     
-
-# Vetor de 10000 elementos
-arr_1000 = generate_random_array(10000) 
+#Vetor de 10000 elementos
+print("Ordenação para 10 mil elementos\n")
+arr_10000 = generate_random_array(10000) 
 print("\nBubble Sort (10000):")
-for i in range(10): 
-    counter = i + 1  
-    print(f"{counter}° Tempo: {measure_time(bubblesort, arr_1000)} segundos")
+with open('bubblesort10.txt', 'w') as arquivo:
+    for i in range(10): 
+        counter = i + 1  
+        arquivo.write(f"{counter}° Tempo: {measure_time(bubblesort, arr_10000):,.5f} segundos\n")
+        print(f"{counter}° Tempo: {measure_time(bubblesort, arr_10000):,.5f} segundos")
+
+print("\nInsertion Sort (10000):")
+with open('insertionsort10.txt', 'w') as arquivo:
+    for i in range(10):
+        counter = i + 1
+        arquivo.write(f"{counter}° Tempo: {measure_time(insertionsort, arr_10000):,.5f} segundos\n")
+        print(f"{counter}° Tempo: {measure_time(insertionsort, arr_10000):,.5f} segundos")
+
+print("\nMerge Sort (10000):")
+with open('mergesort10.txt', 'w')as arquivo:
+    for i in range(10):
+        counter = i + 1
+        arquivo.write(f"{counter}° Tempo: {measure_time(mergesort, arr_10000):,.5f} segundos\n")
+        print(f"{counter}° Tempo: {measure_time(mergesort, arr_10000):,.5f} segundos")
+
+print("\nheapsort (10000):")
+with open('heapsort10.txt', 'w')as arquivo:
+    for i in range(10):
+        counter = i + 1
+        arquivo.write(f"{counter}° Tempo: {measure_time(heapsort, arr_10000):,.5f} segundos\n")
+        print(f"{counter}° Tempo: {measure_time(heapsort, arr_10000):,.5f} segundos")
 
 
-# print("\nBubble Sort (10000):")
-# count_bubble = 0
-# for _ in range(10): 
-#     count_bubble += 1   
-#     print(f"Tempo: count_bubble {measure_time(bubblesort, arr_1000)} segundos")
+print("Ordenação para 50 mil elementos\n")
+#Vetor de 50000 elementos
+arr_50000 = generate_random_array(50000) 
+print("\nBubble Sort (50000):")
+with open('bubblesort50.txt', 'w')as arquivo:
+    for i in range(10): 
+        counter = i + 1  
+        arquivo.write(f"{counter}° Tempo: {measure_time(bubblesort, arr_50000)} segundos\n")
+        print(f"{counter}° Tempo: {measure_time(bubblesort, arr_50000)} segundos")
 
-print("\nInsertion Sort (1000):")
+print("\nInsertion Sort (50000):")
+with open('insertionsort50.txt', 'w')as arquivo:
+    for i in range(10):
+        counter = i + 1
+        arquivo.write(f"{counter}° Tempo: {measure_time(insertionsort, arr_50000)} segundos\n")
+        print(f"{counter}° Tempo: {measure_time(insertionsort, arr_50000)} segundos")
+
+print("\nMerge Sort (50000):")
+with open('mergesort50.txt', 'w')as arquivo:
+    for i in range(10):
+        counter = i + 1
+        arquivo.write(f"{counter}° Tempo: {measure_time(mergesort, arr_50000)} segundos\n")
+        print(f"{counter}° Tempo: {measure_time(mergesort, arr_50000)} segundos")
+
+print("\nheapsort (50000):")
+with open('heapsort50.txt', 'w')as arquivo
 for i in range(10):
     counter = i + 1
-    print(f"{counter}° Tempo: {measure_time(insertionsort, arr_1000)} segundos")
-
-print("\nMerge Sort (1000):")
-for i in range(10):
-    counter = i + 1
-    print(f"{counter}° Tempo: {measure_time(mergesort, arr_1000)} segundos")
-
-print("\nheapsort (1000):")
-for i in range(10):
-    counter = i + 1
-    print(f"{counter}° Tempo: {measure_time(heapsort, arr_1000)} segundos")       
+    arquivo.write(f"{counter}° Tempo: {measure_time(heapsort, arr_50000)} segundos\n")
+    print(f"{counter}° Tempo: {measure_time(heapsort, arr_50000)} segundos")            
