@@ -121,25 +121,25 @@ with open('bubblesort50.txt', 'w')as arquivo:
     for i in range(10): 
         counter = i + 1  
         arquivo.write(f"{counter}° Tempo: {measure_time(bubblesort, arr_50000)} segundos\n")
-        print(f"{counter}° Tempo: {measure_time(bubblesort, arr_50000)} segundos")
+        print(f"{counter}° Tempo: {measure_time(bubblesort, arr_50000):,.5f} segundos")
 
 print("\nInsertion Sort (50000):")
 with open('insertionsort50.txt', 'w')as arquivo:
     for i in range(10):
         counter = i + 1
         arquivo.write(f"{counter}° Tempo: {measure_time(insertionsort, arr_50000)} segundos\n")
-        print(f"{counter}° Tempo: {measure_time(insertionsort, arr_50000)} segundos")
+        print(f"{counter}° Tempo: {measure_time(insertionsort, arr_50000):,.5f} segundos")
 
 print("\nMerge Sort (50000):")
 with open('mergesort50.txt', 'w')as arquivo:
     for i in range(10):
         counter = i + 1
         arquivo.write(f"{counter}° Tempo: {measure_time(mergesort, arr_50000)} segundos\n")
-        print(f"{counter}° Tempo: {measure_time(mergesort, arr_50000)} segundos")
+        print(f"{counter}° Tempo: {measure_time(mergesort, arr_50000):,.5f} segundos")
 
 print("\nheapsort (50000):")
-with open('heapsort50.txt', 'w')as arquivo
+with open('heapsort50.txt', 'w')as arquivo:
 for i in range(10):
     counter = i + 1
     arquivo.write(f"{counter}° Tempo: {measure_time(heapsort, arr_50000)} segundos\n")
-    print(f"{counter}° Tempo: {measure_time(heapsort, arr_50000)} segundos")            
+    print(f"{counter}° Tempo: {measure_time(heapsort, arr_50000):,.5f} segundos")            
