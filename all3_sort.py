@@ -85,14 +85,14 @@ def measure_time(sort_func, arr):
 print("Ordenação para 10 mil elementos\n")
 arr_10000 = generate_random_array(10000) 
 print("\nBubble Sort (10000):")
-with open('bubblesort10.txt', 'w') as arquivo:
+with open('bubblesort10.txt', 'w')as arquivo:
     for i in range(10): 
         counter = i + 1  
         arquivo.write(f"{counter}° Tempo: {measure_time(bubblesort, arr_10000):,.5f} segundos\n")
         print(f"{counter}° Tempo: {measure_time(bubblesort, arr_10000):,.5f} segundos")
 
 print("\nInsertion Sort (10000):")
-with open('insertionsort10.txt', 'w') as arquivo:
+with open('insertionsort10.txt', 'w')as arquivo:
     for i in range(10):
         counter = i + 1
         arquivo.write(f"{counter}° Tempo: {measure_time(insertionsort, arr_10000):,.5f} segundos\n")
@@ -139,7 +139,7 @@ with open('mergesort50.txt', 'w')as arquivo:
 
 print("\nheapsort (50000):")
 with open('heapsort50.txt', 'w')as arquivo:
-for i in range(10):
-    counter = i + 1
-    arquivo.write(f"{counter}° Tempo: {measure_time(heapsort, arr_50000)} segundos\n")
-    print(f"{counter}° Tempo: {measure_time(heapsort, arr_50000):,.5f} segundos")            
+    for i in range(10):
+        counter = i + 1
+        arquivo.write(f"{counter}° Tempo: {measure_time(heapsort, arr_50000)} segundos\n")
+        print(f"{counter}° Tempo: {measure_time(heapsort, arr_50000):,.5f} segundos")            
